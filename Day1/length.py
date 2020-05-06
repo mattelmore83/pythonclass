@@ -1,6 +1,5 @@
 # How fast does a 12 foot car need to be going to fit in a 10 foot garage?
 # https://www.wolframalpha.com/input/?i=length%20contraction
-# Install sympy modules using pip - from CLI run "pip install simpy"
 
 import math
 
