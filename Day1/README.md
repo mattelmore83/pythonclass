@@ -8,6 +8,8 @@ test.py - Hello World
 
 testfunction.py - Hello World function test
 
+nestedfunctions.py - Testing nested function calls
+
 callstackX.py - Call stack and function examples
 
 local-vs-global-vars.py - Example of local vs global variables
