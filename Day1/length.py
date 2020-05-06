@@ -15,9 +15,9 @@ c = (2.997925 * 10**8) # speed of light constant
 
 # formula changed to solve for v
 # use wolframalpha hints to step through this solution
-v = int(math.sqrt((c**2)-((l**2)*(c**2)/(s**2))))
+v = (math.sqrt((c**2)-((l**2)*(c**2)/(s**2))))
 
-print(v,' meters per second or ',v*2.23694,' miles per hour')
+print(int(v),' meters per second or ',int(v)*2.23694,' miles per hour')
 
 
 
