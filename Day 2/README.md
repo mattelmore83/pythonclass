@@ -15,3 +15,5 @@ Day1 Notes.docx - Class notes
 - listincrement.py - simple list incrementer example
 - findmax.py - finding the highest item in a list exercise
 - unpacking.py - simple list unpacking example
+- list_average.py - take a list of numbers and find the average
+- findtargetvalue.py - find a target value in a given list and indicate the occurences

@@ -9,8 +9,8 @@ def get_average(g):
     return (sumList / listItems)
 
 
-p = [5, 10, 15]
+p = [5, 10, 15, 69]
 
-mean = get_average(p)
+mean = round(get_average(p))
 
 print('The average of the list is',mean)
