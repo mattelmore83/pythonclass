@@ -6,8 +6,8 @@ def get_average(g):
     for i in g:
         sumList = sumList + i
         listItems += 1
-    return (sumList / listItems)
-
+    #return (sumList / listItems)   #### can also use len(d) instead of listItems being manually counted
+    return sumList / len(g)
 
 p = [5, 10, 15, 69]
 
