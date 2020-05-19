@@ -1,15 +1,15 @@
-def find_dupes(d):
-    r = {} # create a blank dictionary 'r'
+def find_dupes(data):
+    newDict = {} # create a blank dictionary 'r'
 
     # create keys
-    for i in d:
-        r[i] = 0
+    for item in data:
+        newDict[item] = 0
 
     # increment counts
-    for i in d:
-        r[i] += 1
+    for item in data:
+        newDict[item] += 1
 
-    return r
+    return newDict
 
 z = 'lkasdjflkjaflksdjfljsafs;;;;aklasjdflkj;;sfdakl'
 print (find_dupes(z))

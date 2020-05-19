@@ -1,15 +1,19 @@
+from typing import Dict
+
+
 def find_highest(data):
-    highGrade = 0
-    highStudent = None
+    high_grade = 0
+    high_student = None
 
     for student in data:
         grade = data[student]
-        if grade>highGrade:
-            highGrade = grade
-            highStudent = student
-    return highStudent
+        if grade > high_grade:
+            high_grade = grade
+            high_student = student
+    return high_student
 
-my_grades = {
+
+my_grades: Dict[str, int] = {
     'Jan': 75,
     'Bob': 88,
     'Jil': 52,
