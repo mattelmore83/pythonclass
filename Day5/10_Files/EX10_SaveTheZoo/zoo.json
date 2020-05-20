@@ -1,0 +1,1 @@
+{"question": "Does it live on land?", "yes": {"question": "Does it live on a farm?", "no": "lion", "yes": "cow"}, "no": {"question": "Does it have 8 arms?", "yes": "octopus", "no": "fish"}}
