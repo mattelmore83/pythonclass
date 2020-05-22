@@ -13,7 +13,7 @@
 Lists are objects. We create an empty list object like this:
 
 ```python
-p = list() # other languages would be p = new list()
+self = list() # other languages would be self = new list()
 
 my_stuff = ... # better naming
 
@@ -25,65 +25,65 @@ that is tied to the object. We call these methods, but they work the same as fun
 ```python
 # Appending things to the list
 
-p.append(1)
-p.append('hello')
-p.append(True)
+self.append(1)
+self.append('hello')
+self.append(True)
 
 # Accessing parts of the list
 
-p.__len__() # 3
+self.__len__() # 3
 
-p.__getitem__(0) # 1
-p.__getitem__(1) # 'hello'
-p.__getitem__(-1) # True
-p.__getitem__(-3) # 1
-p.__getitem__(4) # ERROR list index out of range
-p.__getitem__(-4) # ERROR
+self.__getitem__(0) # 1
+self.__getitem__(1) # 'hello'
+self.__getitem__(-1) # True
+self.__getitem__(-3) # 1
+self.__getitem__(4) # ERROR list index out of range
+self.__getitem__(-4) # ERROR
 
-p.__repr__() # Method to make a nice string representation
+self.__repr__() # Method to make a nice string representation
 "[1, 'hello', True]"
 
-p.__setitem__(1,'world')
-p.__delitem__(2) # index
-p.__repr__()
+self.__setitem__(1,'world')
+self.__delitem__(2) # index
+self.__repr__()
 "[1, 'world', True]"
 ```
 
 In all of these operations, we are asking the object to do things. We are calling methods on the object. The python compiler
 gives us some help.
 
-  - p[i] uses `__getitem__` or `__setitem__` depending the direction
-  - len(p) calls `__len__` for us
-  - repr(p) calls `__repr__` for us (this is what the repl uses)
+  - self[i] uses `__getitem__` or `__setitem__` depending the direction
+  - len(self) calls `__len__` for us
+  - repr(self) calls `__repr__` for us (this is what the repl uses)
   - in calls `__contains__` for us
   - del calls `__delitem__` for us
 
 So the usual syntax:
   
 ```python
-p = list()
-p.append('hello')
-p.append('world')
-print(len(p))
-a = p[0]
-p[1]='False'
-p.append(25)
-print(p)
-p.insert(1,400)
-del p[2]
-p.__contains__(4)
-4 in p
-p.index(2)
+self = list()
+self.append('hello')
+self.append('world')
+print(len(self))
+a = self[0]
+self[1]='False'
+self.append(25)
+print(self)
+self.insert(1,400)
+del self[2]
+self.__contains__(4)
+4 in self
+self.index(2)
 ```
 
 And python has a "literal" definition for lists. Instead of using 'list()' you will almost always do this:
 
 ```python
-p = ['hello', 'world']
-p.append('wow') # Does this modify p? NO ... it modifies the object pointed to by p
-print(p)
-q = p + [1,2] # The "__add__" method creates a new list with the items of both
-print(p) 
+self = ['hello', 'world']
+self.append('wow') # Does this modify self? NO ... it modifies the object pointed to by self
+print(self)
+q = self + [1,2] # The "__add__" method creates a new list with the items of both
+print(self) 
 print(q)
 a = [] # make an empty list
 ```
@@ -137,11 +137,11 @@ Other fun: sorting algorithms like the bubble sort
 Tuples are like lists but you can't change/append them. They use "()" instead of "[]".
 
 ```python
-p = (1,2,3)
-p[1] = 4 # ERROR
+self = (1,2,3)
+self[1] = 4 # ERROR
 
 # Has __add__ method:
-q = p + (4,5,6)
+q = self + (4,5,6)
 ```
 
 ## Packing and unpacking
@@ -161,8 +161,8 @@ a,b = get_numbers()
 def get_nums_two():
   return 5,6,7,8
   
-p = get_nums_two() # tuple
-p[2] = ? # 7
+self = get_nums_two() # tuple
+self[2] = ? # 7
 a,b,c,d = get_nums_two()
 ```
 
@@ -173,21 +173,21 @@ First, work through this in code. Then show the pointers.
 SEE snippets.pptx
 
 ```python
-p = [1,2,3,4]
+self = [1,2,3,4]
 h = [25,35]
 
-p[2] = h
+self[2] = h
 
-print(p)
+print(self)
 
-x = p[2]
+x = self[2]
 x[1] = 50
 
-print(p)
+print(self)
 
-p[2][1] = 60
+self[2][1] = 60
 
-print(p)
+print(self)
 ```
 
 Do you need to think about this when you write simple programs? Definitely not.
